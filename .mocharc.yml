@@ -2,3 +2,5 @@ recursive: true
 # spec: 'src/**/*.spec.ts'
 require: ts-node/register
 timeout: 5000
+diff: true
+inline-diffs: true
