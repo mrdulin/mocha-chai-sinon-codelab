@@ -1,0 +1,44 @@
+{
+  "name": "mocha-chai-sinon-codelab",
+  "version": "1.0.0",
+  "description": "Learning testing with Mocha, Chai, Sinon By Examples",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.5",
+    "@types/chai-as-promised": "^7.1.2",
+    "@types/mocha": "^5.2.7",
+    "@types/request": "^2.48.3",
+    "@types/sinon": "^7.5.0",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "prettier": "^1.19.1",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register",
+    "test:c": "nyc npm t",
+    "lint": "eslint --ext .js,.ts ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrdulin/mocha-chai-sinon-codelab.git"
+  },
+  "keywords": [],
+  "author": "mrdulin <novaline.dulin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrdulin/mocha-chai-sinon-codelab/issues"
+  },
+  "homepage": "https://github.com/mrdulin/mocha-chai-sinon-codelab#readme"
+}

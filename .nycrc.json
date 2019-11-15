@@ -1,0 +1,10 @@
+{
+  "extension": [".js", ".cjs", ".mjs", ".ts", ".tsx", ".jsx"],
+  "exclude": ["**/*.d.ts"],
+  "reporter": ["html", "text"],
+  "all": false,
+  "check-coverage": false,
+  "report-dir": "./coverage",
+  "skip-full": false,
+  "temp-dir": "./.nyc_output"
+}
