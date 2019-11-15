@@ -4,14 +4,17 @@
   "description": "Learning testing with Mocha, Chai, Sinon By Examples",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.17.1",
     "request": "^2.88.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.5",
     "@types/chai-as-promised": "^7.1.2",
+    "@types/express": "^4.17.2",
     "@types/mocha": "^5.2.7",
     "@types/request": "^2.48.3",
     "@types/sinon": "^7.5.0",
+    "@types/supertest": "^2.0.8",
     "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@typescript-eslint/parser": "^2.7.0",
     "chai": "^4.2.0",
@@ -22,11 +25,12 @@
     "nyc": "^14.1.1",
     "prettier": "^1.19.1",
     "sinon": "^7.5.0",
+    "supertest": "^4.0.2",
     "ts-node": "^8.5.2",
     "typescript": "^3.7.2"
   },
   "scripts": {
-    "test": "mocha --require ts-node/register",
+    "test": "mocha",
     "test:c": "nyc npm t",
     "lint": "eslint --ext .js,.ts ./src"
   },
