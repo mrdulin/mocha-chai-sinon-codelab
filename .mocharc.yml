@@ -1,5 +1,5 @@
 recursive: true
-# spec: 'src/**/*.spec.ts'
+spec: "./src/**/?(*.)+(spec|test).[jt]s?(x)"
 require: ts-node/register
 timeout: 5000
 diff: true
