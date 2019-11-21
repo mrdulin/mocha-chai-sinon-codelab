@@ -2,7 +2,7 @@
   "name": "mocha-chai-sinon-codelab",
   "version": "1.0.0",
   "description": "Learning testing with Mocha, Chai, Sinon By Examples",
-  "main": "index.js",
+  "main": "",
   "dependencies": {
     "axios": "^0.19.0",
     "express": "^4.17.1",
@@ -53,15 +53,26 @@
     "typescript": "^3.7.2"
   },
   "scripts": {
-    "test": "mocha",
-    "test:c": "nyc npm t",
+    "test": "mocha --spec './src/**/?(*.)+(spec|test).[jt]s?(x)'",
+    "test:coverage": "nyc npm t",
+    "test:single": "mocha",
+    "test:s:c": "nyc npm run test:single",
     "lint": "eslint --ext .js,.ts ./src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrdulin/mocha-chai-sinon-codelab.git"
   },
-  "keywords": [],
+  "keywords": [
+    "unit test",
+    "stub",
+    "mock",
+    "spy",
+    "chai",
+    "sinon",
+    "chai-http",
+    "integration test"
+  ],
   "author": "mrdulin <novaline.dulin@gmail.com>",
   "license": "MIT",
   "bugs": {
