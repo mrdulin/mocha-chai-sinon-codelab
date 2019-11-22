@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function doesFileExist(path) {
   return fs.existsSync(path);

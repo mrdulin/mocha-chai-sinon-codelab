@@ -11,7 +11,7 @@ describe("getDataById", () => {
     sinon.stub(knex, "from").callsFake((): any => {
       return {
         select: selectStub,
-        where: whereStub
+        where: whereStub,
       };
     });
     const actual = await getDataById({ id: 1 });

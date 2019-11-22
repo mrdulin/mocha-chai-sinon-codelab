@@ -1,6 +1,6 @@
 const Socket = {
   connect: function() {
-    socket = new WebSocket("ws://localhost:12345");
+    const socket = new WebSocket("ws://localhost:12345");
     socket.onopen = function() {
       console.log("connected to the server");
     };
@@ -9,7 +9,7 @@ const Socket = {
       console.log("Received:", message.data);
     };
     return socket;
-  }
+  },
 };
 
 module.exports = Socket;

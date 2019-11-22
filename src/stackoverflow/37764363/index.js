@@ -1,4 +1,4 @@
-var request = require("request");
+const request = require("request");
 
 function func(arg1, arg2) {
   request.get("https://github.com/mrdulin", function(error, response, body) {

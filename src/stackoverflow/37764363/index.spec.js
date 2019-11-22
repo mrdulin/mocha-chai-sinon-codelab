@@ -1,6 +1,6 @@
-var foo = require("./");
-var sinon = require("sinon");
-var request = require("request");
+const foo = require("./");
+const sinon = require("sinon");
+const request = require("request");
 
 describe("func", () => {
   afterEach(() => {
@@ -12,11 +12,7 @@ describe("func", () => {
     foo.func(1, 2);
     const mError = new Error("network error");
     getStub.yield(mError, null, null);
-    sinon.assert.calledWith(
-      getStub,
-      "https://github.com/mrdulin",
-      sinon.match.func
-    );
+    sinon.assert.calledWith(getStub, "https://github.com/mrdulin", sinon.match.func);
     sinon.assert.calledWith(logSpy.firstCall, 1, 2);
     sinon.assert.calledWith(logSpy.secondCall, mError);
   });
@@ -27,11 +23,7 @@ describe("func", () => {
     foo.func(1, 2);
     const mResponse = { status: 200 };
     getStub.yield(null, mResponse, null);
-    sinon.assert.calledWith(
-      getStub,
-      "https://github.com/mrdulin",
-      sinon.match.func
-    );
+    sinon.assert.calledWith(getStub, "https://github.com/mrdulin", sinon.match.func);
     sinon.assert.calledWith(logSpy.firstCall, 1, 2);
     sinon.assert.calledWith(logSpy.secondCall, mResponse);
   });
@@ -42,11 +34,7 @@ describe("func", () => {
     foo.func(1, 2);
     const mResponse = { status: 500 };
     getStub.yield(null, mResponse, null);
-    sinon.assert.calledWith(
-      getStub,
-      "https://github.com/mrdulin",
-      sinon.match.func
-    );
+    sinon.assert.calledWith(getStub, "https://github.com/mrdulin", sinon.match.func);
     sinon.assert.calledWith(logSpy.firstCall, 1, 2);
     sinon.assert.calledWith(logSpy.secondCall, "others");
   });

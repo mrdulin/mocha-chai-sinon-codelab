@@ -1,26 +1,26 @@
-import { VMBilling } from './model';
+import { VMBilling } from "./model";
 
-const getDetails = records => {
+const getDetails = (records) => {
   console.log(records);
 };
 
 const getMultipleRecords = async (req, res, next) => {
   try {
-    console.log('getMultipleRecords()');
-    let records = await VMBilling.findAll({
+    console.log("getMultipleRecords()");
+    const records = await VMBilling.findAll({
       include: [
         {
-          model: 'ErrorMessage'
-        }
+          model: "ErrorMessage",
+        },
       ],
       where: [
         {
-          id: req.body.records
-        }
-      ]
+          id: req.body.records,
+        },
+      ],
     });
 
-    let recordsWithDetails = exports.getDetails(records);
+    const recordsWithDetails = exports.getDetails(records);
     console.log(recordsWithDetails);
     return res.status(200).json(recordsWithDetails);
   } catch (error) {

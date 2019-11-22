@@ -17,8 +17,8 @@ describe("MyClass", () => {
       myclass.fetch();
       expect(
         stub.calledWith("/test", {
-          params: { start: "2018-01-01", end: "2018-01-30" }
-        })
+          params: { start: "2018-01-01", end: "2018-01-30" },
+        }),
       ).to.be.true;
     });
   });

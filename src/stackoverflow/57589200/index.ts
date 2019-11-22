@@ -1,5 +1,5 @@
 function func3(): string {
-  return 'some string';
+  return "some string";
 }
 
 function func4() {

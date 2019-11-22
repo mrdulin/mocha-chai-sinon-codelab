@@ -1,9 +1,9 @@
-const sendEmail = require('./sendEmail');
+const sendEmail = require("./sendEmail");
 // @ts-ignore
 const submitDetails = {};
 
 // @ts-ignore
-submitDetails.submitDetails = query => {
+submitDetails.submitDetails = (query) => {
   return sendEmail.sendEmail(query);
 };
 

@@ -1,19 +1,19 @@
-import { expect } from 'chai';
-import sinon from 'sinon';
+import { expect } from "chai";
+import sinon from "sinon";
 
-const Aupdate = require('./');
+const Aupdate = require("./");
 
-describe('Aupdate', () => {
-  it('should check if function is called or not', function() {
-    let reqUpdateAccount = {
+describe("Aupdate", () => {
+  it("should check if function is called or not", function() {
+    const reqUpdateAccount = {
       body: {
-        Account: 'newAccount1'
-      }
+        Account: "newAccount1",
+      },
     };
     const res = {};
-    let spy = sinon.spy(Aupdate, 'getUpdateArgs');
+    const spy = sinon.spy(Aupdate, "getUpdateArgs");
     Aupdate.accountsUpdate(reqUpdateAccount, res);
-    expect(spy.calledWith({ Account: 'newAccount1' })).to.be.true;
+    expect(spy.calledWith({ Account: "newAccount1" })).to.be.true;
     sinon.assert.calledOnce(spy);
   });
 });

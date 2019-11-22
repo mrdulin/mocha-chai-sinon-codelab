@@ -12,8 +12,8 @@ export function myDialogMethod(title, message, buttonLabel, buttonCallback) {
         click: function() {
           ($(this) as any).dialog("close");
           buttonCallback();
-        }
-      }
-    ]
+        },
+      },
+    ],
   });
 }

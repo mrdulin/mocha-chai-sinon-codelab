@@ -1,10 +1,10 @@
-import { expect } from 'chai';
-import sinon, { SinonSandbox, SinonSpy } from 'sinon';
+import { expect } from "chai";
+import sinon, { SinonSandbox, SinonSpy } from "sinon";
 
-const submitDetails = require('./submitDetails');
-const sendEmail = require('./sendEmail');
+const submitDetails = require("./submitDetails");
+const sendEmail = require("./sendEmail");
 
-describe('submitDetails', () => {
+describe("submitDetails", () => {
   let sandbox: SinonSandbox;
 
   before(() => {
@@ -15,14 +15,14 @@ describe('submitDetails', () => {
     sandbox.restore();
   });
 
-  describe('submitDetails', () => {
+  describe("submitDetails", () => {
     let sendEmailSpy: SinonSpy;
 
     beforeEach(() => {
-      sendEmailSpy = sandbox.spy(sendEmail, 'sendEmail');
+      sendEmailSpy = sandbox.spy(sendEmail, "sendEmail");
     });
 
-    it('sendEmail', () => {
+    it("sendEmail", () => {
       submitDetails.submitDetails();
       sandbox.assert.calledOnce(sendEmailSpy);
       expect(sendEmailSpy.calledOnce).to.be.true;

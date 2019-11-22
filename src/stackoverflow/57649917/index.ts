@@ -1,8 +1,8 @@
 export class SomeClass {
   find() {
-    console.log('find');
+    console.log("find");
   }
   findById(id) {
-    console.log('findById');
+    console.log("findById");
   }
 }

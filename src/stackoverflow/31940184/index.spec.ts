@@ -7,20 +7,20 @@ describe("31940184", () => {
   });
   it("myDialogMethod", () => {
     let buttons;
-    const dialogStub = sinon.stub().callsFake(options => {
+    const dialogStub = sinon.stub().callsFake((options) => {
       buttons = options.buttons;
     });
     const htmlStub = sinon.stub();
     const jquerySpy = sinon.stub().callsFake(() => {
       return {
         html: htmlStub,
-        dialog: dialogStub
+        dialog: dialogStub,
       };
     });
     const { myDialogMethod } = proxyquire("./", {
-      jquery: jquerySpy
+      jquery: jquerySpy,
     });
-    let alert = sinon.stub();
+    const alert = sinon.stub();
     const buttonCallback = function() {
       alert("callback");
     };
@@ -31,7 +31,7 @@ describe("31940184", () => {
     sinon.assert.calledWith(dialogStub.firstCall, {
       modal: true,
       title: "Modal Title",
-      buttons: [{ text: "OK", click: sinon.match.func }]
+      buttons: [{ text: "OK", click: sinon.match.func }],
     });
     const button = buttons[0];
     button.click();

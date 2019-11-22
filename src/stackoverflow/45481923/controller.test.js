@@ -19,9 +19,9 @@ describe("getAllRooms", () => {
       {
         method: "GET",
         url: "http://google.com/a",
-        body: {}
+        body: {},
       },
-      sinon.match.func
+      sinon.match.func,
     );
     sinon.assert.calledWith(sendStub, ["google"]);
   });
@@ -39,9 +39,9 @@ describe("getAllRooms", () => {
       {
         method: "GET",
         url: "http://google.com/a",
-        body: {}
+        body: {},
       },
-      sinon.match.func
+      sinon.match.func,
     );
     sinon.assert.notCalled(sendStub);
   });

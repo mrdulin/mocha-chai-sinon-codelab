@@ -1,6 +1,6 @@
 function _myFunc() {
-  console.log('real implementation');
+  console.log("real implementation");
 }
 module.exports = {
-  _myFunc
+  _myFunc,
 };

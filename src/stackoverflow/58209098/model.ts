@@ -1,5 +1,5 @@
 export const VMBilling = {
-  findAll(conditions) {
-    console.log('conditions');
-  }
+  async findAll(conditions) {
+    console.log("conditions");
+  },
 };

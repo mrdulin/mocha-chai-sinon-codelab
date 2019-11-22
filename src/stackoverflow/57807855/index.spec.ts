@@ -17,12 +17,12 @@ describe("myFunction", () => {
         baseURL: "http://myawesome-site.com",
         url: "/api/path",
         headers: {
-          "content-type": "application/json"
+          "content-type": "application/json",
         },
         data: {
-          example: "my data"
-        }
-      })
+          example: "my data",
+        },
+      }),
     ).to.be.true;
     expect(logSpy.calledWith("do something")).to.be.true;
   });
@@ -38,12 +38,12 @@ describe("myFunction", () => {
         baseURL: "http://myawesome-site.com",
         url: "/api/path",
         headers: {
-          "content-type": "application/json"
+          "content-type": "application/json",
         },
         data: {
-          example: "my data"
-        }
-      })
+          example: "my data",
+        },
+      }),
     ).to.be.true;
     expect(logSpy.calledWith("do something else")).to.be.true;
   });

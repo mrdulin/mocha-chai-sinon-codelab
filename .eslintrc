@@ -3,13 +3,38 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint"],
+  // https://eslint.org/docs/user-guide/configuring#specifying-environments
+  "env": {
+    "es6": true,
+    "node": true,
+    "mocha": true,
+    "browser": true
+  },
+  "plugins": ["@typescript-eslint", "mocha"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:mocha/recommended",
     "prettier",
     "prettier/@typescript-eslint"
-  ]
+  ],
+  "rules": {
+    // https://github.com/lo1tuma/eslint-plugin-mocha/blob/master/docs/rules/no-mocha-arrows.md
+    "mocha/no-mocha-arrows": 0,
+    "mocha/no-hooks-for-single-case": 0,
+    "@typescript-eslint/ban-ts-ignore": 0,
+    // https://github.com/typescript-eslint/typescript-eslint/issues/149
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/camelcase": 0,
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-unused-vars": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/require-await": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/class-name-casing": 0,
+    "@typescript-eslint/no-explicit-any": 0
+  }
 }

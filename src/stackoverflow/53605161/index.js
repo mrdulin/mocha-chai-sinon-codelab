@@ -1,8 +1,8 @@
-const getAuthenticationInfo = orgId => {
-  return 'TEST';
+const getAuthenticationInfo = (orgId) => {
+  return "TEST";
 };
-const getAuthToken = orgId => {
-  var lmsInfo = exports.getAuthenticationInfo(orgId);
+const getAuthToken = (orgId) => {
+  const lmsInfo = exports.getAuthenticationInfo(orgId);
   return lmsInfo;
 };
 

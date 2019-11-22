@@ -6,10 +6,10 @@ describe("report-exporter", () => {
     afterEach(() => {
       sinon.restore();
     });
-    const fakeError = new Error("Undefined is not a function");
-    fakeError.httpCode = 500;
 
     it("Should return an error response", () => {
+      const fakeError = new Error("Undefined is not a function");
+      fakeError.httpCode = 500;
       const logSpy = sinon.spy(console, "log");
       const mReq = { body: {} };
       const mRes = { send: sinon.stub().returnsThis(), json: sinon.stub() };
@@ -19,7 +19,7 @@ describe("report-exporter", () => {
       const generate = proxyquire("./", {
         "./convert": convertStub,
         "./error-handler": errorHandlerStub,
-        "./request-converter": transformRequestStub
+        "./request-converter": transformRequestStub,
       });
 
       generate.generateReport(mReq, mRes);

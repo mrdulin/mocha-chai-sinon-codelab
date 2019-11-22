@@ -14,10 +14,7 @@ exports.generateReport = function generateReport(req, res) {
     console.log("GOOD");
     res
       .set("Content-Type", "application/pdf")
-      .set(
-        "Content-Disposition",
-        `attachment; filename=velocity_report_${new Date()}.pdf`
-      )
+      .set("Content-Disposition", `attachment; filename=velocity_report_${new Date()}.pdf`)
       .set("Content-Length", data.length)
       .status(200)
       .end(data);

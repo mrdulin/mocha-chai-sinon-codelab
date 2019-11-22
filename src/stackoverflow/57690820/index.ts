@@ -1,4 +1,4 @@
-import * as os from 'os';
+import * as os from "os";
 
 export class Something {
   getInterfaces() {

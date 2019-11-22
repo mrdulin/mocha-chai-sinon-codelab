@@ -1,10 +1,10 @@
 async function functionA() {
-  var resultB = exports.functionB();
+  const resultB = exports.functionB();
   return resultB;
 }
 
 function functionB() {
-  return 'FuncB';
+  return "FuncB";
 }
 
 exports.functionA = functionA;

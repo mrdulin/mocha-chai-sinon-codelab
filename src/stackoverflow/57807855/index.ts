@@ -1,26 +1,26 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig } from "axios";
 
 exports.myFunction = function myFunction() {
   const data = {
-    example: 'my data'
+    example: "my data",
   };
 
   const headers = {
-    'content-type': 'application/json'
+    "content-type": "application/json",
   };
 
   const request: AxiosRequestConfig = {
-    method: 'POST',
-    baseURL: 'http://myawesome-site.com',
-    url: '/api/path',
+    method: "POST",
+    baseURL: "http://myawesome-site.com",
+    url: "/api/path",
     headers,
-    data
+    data,
   };
 
   return exports
     .axios(request)
-    .then(res => console.log('do something'))
-    .catch(err => console.log('do something else'));
+    .then((res) => console.log("do something"))
+    .catch((err) => console.log("do something else"));
 };
 
 exports.axios = axios;

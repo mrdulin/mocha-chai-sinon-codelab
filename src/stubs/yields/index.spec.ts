@@ -6,7 +6,7 @@ describe("fsExists", () => {
   afterEach(() => {
     sinon.restore();
   });
-  it("should handle non-existed file", done => {
+  it("should handle non-existed file", (done) => {
     const stub = sinon.stub(fs, "exists");
     const callbackStub = sinon.stub().callsFake(() => {
       done();
@@ -17,7 +17,7 @@ describe("fsExists", () => {
     sinon.assert.calledWith(callbackStub, "file does not exist");
   });
 
-  it("should handle file", done => {
+  it("should handle file", (done) => {
     const stub = sinon.stub(fs, "exists");
     const callbackStub = sinon.stub().callsFake(() => {
       done();

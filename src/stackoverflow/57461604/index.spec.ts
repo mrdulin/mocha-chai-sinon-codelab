@@ -11,11 +11,11 @@ describe("myFunc", () => {
     const propStub = sinon.stub().returnsThis();
     const jqueryStub = sinon.stub().callsFake(() => {
       return {
-        prop: propStub
+        prop: propStub,
       };
     });
     const { myFunc } = proxyquire("./", {
-      jquery: jqueryStub
+      jquery: jqueryStub,
     });
     myFunc(el);
     expect(jqueryStub.calledWith(el)).to.be.true;

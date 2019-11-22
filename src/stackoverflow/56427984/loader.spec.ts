@@ -1,14 +1,14 @@
-import dotenv from 'dotenv';
-import sinon from 'sinon';
-import { expect } from 'chai';
+import dotenv from "dotenv";
+import sinon from "sinon";
+import { expect } from "chai";
 
-describe('SimpleLoader', function() {
+describe("SimpleLoader", function() {
   beforeEach(function() {
-    this.dotenvSpy = sinon.spy(dotenv, 'config');
-    this.SimpleLoader = require('./loader').SimpleLoader;
+    this.dotenvSpy = sinon.spy(dotenv, "config");
+    this.SimpleLoader = require("./loader").SimpleLoader;
   });
 
-  it('loads correctly using default options', function() {
+  it("loads correctly using default options", function() {
     const loader = new this.SimpleLoader();
     loader.load();
     expect(this.dotenvSpy.calledOnce).to.be.true;

@@ -1,9 +1,9 @@
-import { SomeClass } from './';
-import sinon from 'sinon';
-import { expect } from 'chai';
+import { SomeClass } from "./";
+import sinon from "sinon";
+import { expect } from "chai";
 
-describe('57649917', () => {
-  it('should stub all methods of SomeClass', () => {
+describe("57649917", () => {
+  it("should stub all methods of SomeClass", () => {
     const stubInstance = sinon.createStubInstance(SomeClass);
     stubInstance.find();
     stubInstance.findById(1);

@@ -1,10 +1,10 @@
-const Database = require('./db');
+const Database = require("./db");
 
 module.exports = {
   setupNewUser: (info, callback) => {
-    let user = {
+    const user = {
       name: info.name,
-      nameLowercase: info.name.toLowerCase()
+      nameLowercase: info.name.toLowerCase(),
     };
 
     try {
@@ -12,5 +12,5 @@ module.exports = {
     } catch (err) {
       callback(err);
     }
-  }
+  },
 };

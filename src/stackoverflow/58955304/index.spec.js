@@ -13,10 +13,10 @@ describe("code", function() {
         OAuth2Client: sinon.stub().callsFake(() => {
           return {
             generateAuthUrl: generateUrlStub,
-            getToken: tokenStub
+            getToken: tokenStub,
           };
-        })
-      }
+        }),
+      },
     });
   });
   afterEach(() => {
