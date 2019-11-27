@@ -2,7 +2,7 @@ const rp = require("request-promise");
 
 async function readSite() {
   try {
-    let response = await rp("http://www.google.com");
+    const response = await rp("http://www.google.com");
     return response;
   } catch (err) {
     console.log(err);
@@ -10,7 +10,7 @@ async function readSite() {
 }
 
 async function main() {
-  let response = await exports.readSite();
+  const response = await exports.readSite();
   return response;
 }
 
