@@ -28,5 +28,7 @@ describe("Check", () => {
 
     expect(res.send.calledOnce).to.be.true;
     expect(res.status.firstCall.args[0]).to.equal(500);
+    sinon.assert.calledOnce(validateTicketStub);
+    validateTicketStub.restore();
   });
 });
