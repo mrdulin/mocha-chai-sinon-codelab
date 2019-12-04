@@ -1,3 +1,3 @@
 export const pingHandler = (request, response, next) => {
-  response.status(200).send('Hello world');
-}
+  response.status(200).send("Hello world");
+};
