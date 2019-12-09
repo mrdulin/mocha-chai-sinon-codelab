@@ -1,5 +1,5 @@
 recursive: true
 require: ts-node/register
-timeout: 5000
+timeout: 2000
 diff: true
 inline-diffs: true
