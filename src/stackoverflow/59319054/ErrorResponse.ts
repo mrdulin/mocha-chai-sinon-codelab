@@ -1,8 +1,8 @@
 export default class ErrorResponse {
   public desc = "";
   public args: any;
-  public code: string = "";
-  public message: string = "";
+  public code = "";
+  public message = "";
   constructor(message, code, desc, args) {
     this.message = message;
     this.desc = desc;

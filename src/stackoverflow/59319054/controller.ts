@@ -9,7 +9,7 @@ const constants = {
 
 export const GetPartnerByPKController: Route = async (req, res) => {
   console.debug("Entering GetPartnerByPKController()");
-  let uuid = req.params.uuid;
+  const uuid = req.params.uuid;
   console.time("TimeTaken:DBCall:");
   console.log("Entering GetPartnerByPKController()" + uuid);
   await partnerDao
