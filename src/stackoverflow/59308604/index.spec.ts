@@ -34,7 +34,7 @@ describe("59308604", () => {
       return "123";
     }
     return co(function*() {
-      var result = yield* g1();
+      const result = yield* g1();
       return result;
     }).then((value) => {
       expect(value).to.be.eql("123");
