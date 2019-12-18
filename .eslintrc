@@ -36,6 +36,10 @@
     "@typescript-eslint/no-empty-interface": 0,
     "@typescript-eslint/class-name-casing": 0,
     "@typescript-eslint/no-explicit-any": 0,
-    "require-yield": 0
+    "require-yield": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "mocha/no-setup-in-describe": 0,
+    "mocha/no-exclusive-tests": 0,
+    "mocha/no-skipped-tests": 0
   }
 }

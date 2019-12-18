@@ -8,7 +8,7 @@ import { expect } from "chai";
 
 const sandbox = sinon.createSandbox();
 
-describe.only("Demo Spec 2", () => {
+describe("Demo Spec 2", () => {
   const demoController = container.get<IDemoController>(TYPES.IDemoController);
   let insertStub: sinon.SinonStub<any, any>;
   beforeEach(() => {
