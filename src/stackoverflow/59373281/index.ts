@@ -6,3 +6,11 @@ export async function abc() {
   const files = await storage.bucket(bucketName).getFiles();
   return files;
 }
+
+export async function xyz(res) {
+  const bucketName = "xxx-dev";
+  return storage
+    .bucket(bucketName)
+    .file(res.fileName)
+    .createReadStream();
+}
