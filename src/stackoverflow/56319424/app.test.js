@@ -13,7 +13,7 @@ describe("Test report api ", function() {
         if (err) {
           return done(err);
         }
-        done(
+        done();
       });
   });
 });

@@ -2,7 +2,7 @@ import { abc } from ".";
 import sinon from "sinon";
 import { Storage } from "@google-cloud/storage";
 
-describe("59405183", () => {
+describe.skip("59405183", () => {
   it("should pass", () => {
     const mReq = {};
     const mRes = {
