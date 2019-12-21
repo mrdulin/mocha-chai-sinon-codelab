@@ -17,6 +17,7 @@ app.post("/signin", (req, res) => {
 });
 
 app.get("/protected", (req, res) => {
+  console.log("req.session.auth: ", req.session.auth);
   if (!req.session.auth) {
     return res.sendStatus(401);
   }
