@@ -17,5 +17,6 @@ describe("59435659", () => {
     const bulkUpdateDependencies = require("./bulk-update-dependencies.js");
     const actual = bulkUpdateDependencies();
     expect(actual).to.be.equal("stubbed data");
+    sinon.assert.calledOnce(bulkUpdateDependenciesStub);
   });
 });
