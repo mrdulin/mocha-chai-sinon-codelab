@@ -38,6 +38,7 @@
     "@typescript-eslint/no-explicit-any": 0,
     "require-yield": 0,
     "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/unbound-method": 0,
     "mocha/no-setup-in-describe": 0,
     "mocha/no-exclusive-tests": 0,
     "mocha/no-skipped-tests": 0
