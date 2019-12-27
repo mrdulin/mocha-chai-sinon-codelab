@@ -9,11 +9,9 @@ export function abc(req, res) {
   let buffer = "";
   myfile
     .on("data", function(a) {
-      console.log("a: ", a);
       buffer += a;
     })
-    .on("end", function(b) {
-      console.log("b: ", b);
+    .on("end", function() {
       console.log(buffer);
       res.send(buffer);
     });
