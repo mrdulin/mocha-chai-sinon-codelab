@@ -12,6 +12,7 @@
     "co": "^4.6.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "glob": "^7.1.6",
     "google-auth-library": "^5.5.1",
     "inversify": "^5.0.1",
     "jquery": "^3.4.1",
