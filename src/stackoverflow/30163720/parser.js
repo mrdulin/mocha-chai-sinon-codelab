@@ -5,7 +5,7 @@ const Parser = {
         callback(err);
         return;
       }
-      var clean_text = Parser.cleanUp(raw_text);
+      const clean_text = Parser.cleanUp(raw_text);
       callback(null, clean_text);
     });
   },

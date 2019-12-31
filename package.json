@@ -33,7 +33,8 @@
     "redux-saga": "^1.1.3",
     "reflect-metadata": "^0.1.13",
     "request": "^2.88.0",
-    "request-promise": "^4.2.5"
+    "request-promise": "^4.2.5",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "@types/chai": "^4.2.5",

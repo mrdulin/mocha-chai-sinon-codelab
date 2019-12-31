@@ -1,7 +1,7 @@
 const Post = require("./models/post");
 
 function findPostsByCategoryId(categoryId, first, second) {
-  var sortingOrd = { createdAt: -1 };
+  const sortingOrd = { createdAt: -1 };
   return Post.find({ categoryId: categoryId })
     .sort(sortingOrd)
     .skip(first)

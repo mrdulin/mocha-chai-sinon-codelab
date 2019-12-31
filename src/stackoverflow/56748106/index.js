@@ -5,17 +5,17 @@ const arr = [
   { name: "job3", delay: 300 },
 ];
 
-function main() {
-  async.eachLimit(arr, 3, iteratee, function(error) {
-    console.log(error);
-  });
-}
-
 function iteratee(job, callback) {
   console.log(`Execute the job: ` + job.name);
   setTimeout(function() {
     callback(null, job.name);
   }, job.delay);
+}
+
+function main() {
+  async.eachLimit(arr, 3, iteratee, function(error) {
+    console.log(error);
+  });
 }
 
 module.exports = {
