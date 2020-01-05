@@ -27,6 +27,7 @@
     "@typescript-eslint/ban-ts-ignore": 0,
     // https://github.com/typescript-eslint/typescript-eslint/issues/149
     "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-use-before-define": 0,
     "@typescript-eslint/camelcase": 0,
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
     "@typescript-eslint/no-var-requires": 0,
