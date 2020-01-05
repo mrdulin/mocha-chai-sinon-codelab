@@ -5,15 +5,18 @@ import { expect } from "chai";
 // You don't need to setup jsdom in browser test environment
 // jsdom start
 import jsdom from "jsdom";
-const html = '<!doctype html><html><head><meta charset="utf-8">' + "</head><body></body></html>";
-const url = "http://localhost";
-const document = new jsdom.JSDOM(html, { url });
-const window = document.window;
-(global as any).document = window.document;
-(global as any).window = window;
+
 // jsdom end
 
 describe("MyElement", () => {
+  before(() => {
+    const html = '<!doctype html><html><head><meta charset="utf-8">' + "</head><body></body></html>";
+    const url = "http://localhost";
+    const document = new jsdom.JSDOM(html, { url });
+    const window = document.window;
+    (global as any).document = window.document;
+    (global as any).window = window;
+  });
   afterEach(() => {
     sinon.restore();
   });
