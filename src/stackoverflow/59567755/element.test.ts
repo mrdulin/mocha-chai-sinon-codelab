@@ -1,14 +1,10 @@
 import MyElement from "./element";
 import sinon from "sinon";
 import { expect } from "chai";
-
-// You don't need to setup jsdom in browser test environment
-// jsdom start
 import jsdom from "jsdom";
 
-// jsdom end
-
 describe("MyElement", () => {
+  // You don't need to setup jsdom in browser test environment
   before(() => {
     const html = '<!doctype html><html><head><meta charset="utf-8">' + "</head><body></body></html>";
     const url = "http://localhost";
