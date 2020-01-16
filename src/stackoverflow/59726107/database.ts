@@ -19,7 +19,7 @@ class Database {
       this.connect();
     }
 
-    return this.knexInstance!;
+    return this.knexInstance as Knex;
   }
 
   close(done): void {
