@@ -16,7 +16,7 @@
     "glob": "^7.1.6",
     "google-auth-library": "^5.5.1",
     "inversify": "^5.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.2",
     "lodash": "^4.17.15",
